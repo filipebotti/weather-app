@@ -1,11 +1,12 @@
 import React from 'react'
+import { View } from 'react-native'
 import styled, { withTheme } from 'styled-components'
 
 import { Text, ForecastIcon } from '../../../UI'
 
 const Wrapper = styled.View`
   alignItems: center
-  
+  width: 78
 `
 const CenteredView = styled.View`
   alignItems: center
@@ -39,6 +40,7 @@ export default withTheme(({ label, icon, value, theme }) => {
         lineHeight={24}
         letterSpacing={2.0}
         fontWeight={500}
+        textAlign={'center'}
       >
         {value}
       </Text>

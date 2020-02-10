@@ -10,7 +10,7 @@ stories.addDecorator(withKnobs)
 
 stories.add('ForecastInfoItem', () => {
 
-  const icon = select('Icon', ['umidity','winds', 'pressure'], 'umidity')
+  const icon = select('Icon', ['humidity','winds', 'pressure'], 'humidity')
   const label = text('Label', 'Umidade')
   const value = number('Value', 87)
 
