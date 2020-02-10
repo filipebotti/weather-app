@@ -4,6 +4,7 @@
 // https://github.com/elderfo/react-native-storybook-loader.git
 
 function loadStories() {
+	require('../src/components/UI/ForecastIcon/index.stories');
 	require('../src/components/UI/ShadowText/index.stories');
 	require('../src/components/UI/ShadowView/index.stories');
 	require('../src/components/UI/Text/index.stories');
@@ -12,6 +13,7 @@ function loadStories() {
 }
 
 const stories = [
+	'../src/components/UI/ForecastIcon/index.stories',
 	'../src/components/UI/ShadowText/index.stories',
 	'../src/components/UI/ShadowView/index.stories',
 	'../src/components/UI/Text/index.stories',
