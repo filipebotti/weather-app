@@ -4,7 +4,7 @@ import { withKnobs, text, select, number } from '@storybook/addon-knobs'
 import light from '../../../utils/themes/light'
 import Icon from './index'
 
-const stories = storiesOf("Icon", module)
+const stories = storiesOf("ForecastIcon", module)
 stories.addDecorator(withKnobs)
 
 stories.add('Umidity', () => {
