@@ -1,12 +1,47 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
+
+import { Text, ForecastIcon } from '../../../UI'
 
 const Wrapper = styled.View`
+  alignItems: center
   
 `
+const CenteredView = styled.View`
+  alignItems: center
+  justifyContent: center
+`
 
-export default () => {
+const IconWrapper = styled(CenteredView)`
+  height: 22.9  
+`
+
+const LabelWrapper = styled(CenteredView)`
+  height: 53
+`
+
+export default withTheme(({ label, icon, value, theme }) => {
   return (
-    <Wrapper/>
+    <Wrapper>
+      <IconWrapper>
+        <ForecastIcon 
+          name={icon}
+          color={theme.colors.primaryColor}
+        />
+      </IconWrapper>
+      <LabelWrapper>
+        <Text>
+          {label.toUpperCase()}
+        </Text>
+      </LabelWrapper>
+      <Text
+        fontSize={20}
+        lineHeight={24}
+        letterSpacing={2.0}
+        fontWeight={500}
+      >
+        {value}
+      </Text>
+    </Wrapper>
   )
-}
+})
