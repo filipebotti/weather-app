@@ -7,7 +7,7 @@ import MinMaxCard from './index'
 const stories = storiesOf("Weather", module)
 stories.addDecorator(withKnobs)
 
-stories.add('Shadow View', () => {
+stories.add('MinMaxCard', () => {
 
   const min = text('Min', '23°')
   const max = text('Max', '31°')
