@@ -7,7 +7,5 @@ export default styled(Text).attrs(props => ({
 }))`
   shadowColor: ${props => props.shadowColor || 'black'}
   shadowOpacity: ${props => props.shadowOpacity || 0.16}
-  shadowRadius: ${props => props.shadowRadius || 6 }
-  width: ${props => props.width || 50}
-  height: ${props => props.height || 50}
+  shadowRadius: ${props => props.shadowRadius || 6 }  
 `

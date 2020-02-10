@@ -7,4 +7,7 @@ export default styled.View.attrs(props => ({
   shadowColor: ${props => props.shadowColor || 'black' } 
   shadowOpacity: ${props => props.shadowOpacity || 0.1}
   shadowRadius: ${props => props.shadowRadius || 3 }
+  backgroundColor: ${props => props.color || 'white'}
+  width: ${props => props.width || 50}
+  height: ${props => props.height || 50}
 `

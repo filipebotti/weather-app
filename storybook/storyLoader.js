@@ -7,6 +7,7 @@ function loadStories() {
 	require('../src/components/UI/ShadowText/index.stories');
 	require('../src/components/UI/ShadowView/index.stories');
 	require('../src/components/UI/Text/index.stories');
+	require('../src/components/Weather/ForecastCard/index.stories');
 	require('../src/components/Weather/MinMaxCard/index.stories');
 }
 
@@ -14,6 +15,7 @@ const stories = [
 	'../src/components/UI/ShadowText/index.stories',
 	'../src/components/UI/ShadowView/index.stories',
 	'../src/components/UI/Text/index.stories',
+	'../src/components/Weather/ForecastCard/index.stories',
 	'../src/components/Weather/MinMaxCard/index.stories'
 ];
 
