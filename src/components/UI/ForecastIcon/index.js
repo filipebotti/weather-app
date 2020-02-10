@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Umidity from '../../../../assets/icons/umidity.svg'
+import humidity from '../../../../assets/icons/humidity.svg'
 import Winds from '../../../../assets/icons/winds.svg'
 import Pressure from '../../../../assets/icons/pressure.svg'
 
 const icons = {
-  umidity: {
-    svg: Umidity,
+  humidity: {
+    svg: humidity,
     width: 16.09,
     height: 13.49
   },

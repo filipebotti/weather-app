@@ -7,12 +7,12 @@ import Icon from './index'
 const stories = storiesOf("ForecastIcon", module)
 stories.addDecorator(withKnobs)
 
-stories.add('Umidity', () => {
+stories.add('humidity', () => {
   
   const color = select('Color', light.colors, light.colors.primaryColor )
   
   return <Icon 
-          name={'umidity'}
+          name={'humidity'}
           color={color}
         />
 })
