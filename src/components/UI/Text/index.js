@@ -8,4 +8,5 @@ export default styled.Text`
   letterSpacing: ${props => props.letterSpacing || 1.2}
   color: ${props => props.color || props.theme.colors.primaryColor};
   fontWeight: ${props => props.fontWeight || 'normal'};
+  textAlign: ${props => props.textAlign || 'left'}
 `
