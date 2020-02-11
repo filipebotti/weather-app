@@ -12,6 +12,7 @@ function loadStories() {
 	require('../src/components/Weather/ForecastInfo/ForecastInfoItem/index.stories');
 	require('../src/components/Weather/ForecastInfo/index.stories');
 	require('../src/components/Weather/MinMaxCard/index.stories');
+	require('../src/components/Weather/index.stories');
 }
 
 const stories = [
@@ -22,7 +23,8 @@ const stories = [
 	'../src/components/Weather/ForecastCard/index.stories',
 	'../src/components/Weather/ForecastInfo/ForecastInfoItem/index.stories',
 	'../src/components/Weather/ForecastInfo/index.stories',
-	'../src/components/Weather/MinMaxCard/index.stories'
+	'../src/components/Weather/MinMaxCard/index.stories',
+	'../src/components/Weather/index.stories'
 ];
 
 module.exports = {
