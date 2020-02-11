@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Geolocation from 'react-native-geolocation-service';
+import { connect } from 'react-redux'
 
-export default Component => props => {
+export default Component => connect(mapStateToProps)(props => {
 
   useEffect(() => {
     Geolocation.getCurrentPosition(
@@ -26,4 +27,9 @@ export default Component => props => {
           sunrise={'5:14'}
           sunset={'17:45'}
         />
+})
+
+const mapStateToProps = (state) => {
+  const { weather } = state
+  return { weather }
 }
