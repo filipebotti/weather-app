@@ -2,13 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import ShadowView from '../../UI/ShadowView'
 import Text from '../../UI/Text'
+import { Dimensions } from 'react-native'
+const { height } = Dimensions.get('window')
+
 
 const Content = styled(ShadowView)`
-  width: 307
-  height: 78
+  width: ${height * 0.38}
+  height: ${height * 0.096}
   flexDirection: row
   borderRadius: 18
-  paddingVertical: 16
+  paddingVertical: ${height * 0.02}
   position: absolute
   top: -40
   backgroundColor: ${props => props.theme.colors.backgroundColor}

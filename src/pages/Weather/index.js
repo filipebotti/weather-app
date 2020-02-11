@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import withLogic from './withLogic'
 
+import { Dimensions } from 'react-native'
 import { Text, RoundedButton } from '../../components/UI'
 import { ForecastCard, ForecastInfo, DayNightInfo } from '../../components/Weather'
 
-import withLogic from './withLogic'
+const { height } = Dimensions.get('window')
 
 const Wrapper = styled.View`
   flex: 1
@@ -13,14 +15,15 @@ const WeatherWrapper = styled.View`
   flex: 1
   backgroundColor: ${props => props.theme.colors.primaryColor}  
   alignItems: center
-  paddingTop: 25
-  paddingBottom: 95.5
-  justifyContent: space-between
+  paddingTop: ${height * 0.012}
+  paddingBottom: ${height * 0.10}
+  justifyContent: space-around
 `
 const CityText = styled(Text)`
   color: ${props => props.theme.colors.backgroundColor}
   fontSize: 20
   lineHeight: 24
+  marginBottom: 15
 `
 
 const RefreshButton = styled(RoundedButton)`
@@ -62,10 +65,12 @@ const WeatherPage = (props) => {
         min={min}
         max={max}      
       />
-      <DayNightInfo
-        sunrise={sunrise}
-        sunset={sunset}
-      />
+      {height > 667 &&
+        <DayNightInfo
+          sunrise={sunrise}
+          sunset={sunset}
+        />
+      }
       <RefreshButton
         onPress={onPressRefresh}
       />

@@ -5,15 +5,14 @@ import styled from 'styled-components'
 import MinMaxCard from '../MinMaxCard'
 import ForecastInfoItem from './ForecastInfoItem'
 
-const { width } = Dimensions.get('window')
+const { height } = Dimensions.get('window')
 
 
 const Wrapper = styled.View`
-  width: ${width}
-  height: 310
+  height: ${height * 0.38}
   alignItems: center
   backgroundColor: ${props => props.theme.colors.backgroundColor}
-  paddingTop: 84
+  paddingTop: ${height * 0.11}
   paddingHorizontal: 38
 `
 

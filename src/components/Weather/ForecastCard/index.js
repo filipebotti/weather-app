@@ -2,13 +2,13 @@ import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import ShadowView from '../../UI/ShadowView'
 import { Text, ForecastIcon } from '../../UI'
-import { View } from 'react-native'
+import { Dimensions } from 'react-native'
+const { height } = Dimensions.get('window')
 
-// import Cloudy from '../../../../assets/icons/006-cloudy-12.svg'
 
 const Wrapper = styled(ShadowView)`
-  width: 307
-  height: 290
+  width: ${height * 0.38}
+  height: ${height * 0.35}
   backgroundColor: ${props => props.theme.colors.backgroundColor}
   alignItems: center
   justifyContent: space-between
@@ -18,13 +18,21 @@ const Wrapper = styled(ShadowView)`
 `
 
 export default withTheme(({ temp, weatherIcon = '01d', theme }) => {
+
+  const iconWidth = height * 0.25
+  const iconHeight = height * 0.185
+
   return (
     <Wrapper
       shadowRadius={6}
       shadowOpacity={0.16}
     >
-      <ForecastIcon name={weatherIcon} color={theme.colors.primaryColor}/>
-      {/* <Cloudy width={203.3} height={150.9} fill={theme.colors.primaryColor}/> */}
+      <ForecastIcon 
+        name={weatherIcon} 
+        color={theme.colors.primaryColor}
+        width={iconWidth}
+        height={iconHeight}  
+      />      
       <Text
         fontSize={39}
         lineHeight={47}
