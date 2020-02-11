@@ -15,7 +15,7 @@ const Marker = styled.View`
 `
 
 const ContentWrapper = styled.View`
-  width: 50
+  width: 55
   height: 50
   alignItems: center
   justifyContent: space-between    

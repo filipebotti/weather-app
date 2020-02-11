@@ -29,7 +29,7 @@ export default withTheme(({ temp, theme }) => {
         lineHeight={47}
         fontWeight={500}
       >
-        {temp}C
+        {temp}°C
       </Text>
     </Wrapper>
   )

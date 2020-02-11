@@ -6,7 +6,7 @@ import { Text, ForecastIcon } from '../../../UI'
 
 const Wrapper = styled.View`
   alignItems: center
-  width: 78  
+  width: 85
 `
 const CenteredView = styled.View`
   alignItems: center
@@ -28,7 +28,7 @@ const AditionalInfoText = styled(Text)`
   fontWeight: 500
 `
 
-export default withTheme(({ label, icon, value, theme, aditionalInfo }) => {
+export default withTheme(({ label, icon, value, unit, theme, aditionalInfo }) => {
   return (
     <Wrapper>
       <IconWrapper>
@@ -51,6 +51,14 @@ export default withTheme(({ label, icon, value, theme, aditionalInfo }) => {
         fontWeight={500}
       >
         {value}
+        <Text
+          fontSize={10}
+          lineHeight={12}
+          letterSpacing={1.0}
+          fontWeight={500}
+        >
+          {unit}
+        </Text>
       </Text>
       {aditionalInfo != '' && <AditionalInfoText>{aditionalInfo}</AditionalInfoText>}
     </Wrapper>

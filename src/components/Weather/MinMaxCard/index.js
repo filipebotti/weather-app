@@ -36,7 +36,7 @@ export default ({ min, max }) => {
           letterSpacing={2.0}
           fontWeight={500}
         >
-          {min}
+          {min}°
         </Text>
       </BorderedTempWrapper>
       <TempWrapper>
@@ -47,7 +47,7 @@ export default ({ min, max }) => {
           letterSpacing={2.0}
           fontWeight={500}
         >
-          {max}
+          {max}°
         </Text>
       </TempWrapper>
     </Content>

@@ -35,16 +35,19 @@ export default ({ humidity, winds, windsDirection, pressure, min, max }) => {
           label={'Umidade'}
           icon={'humidity'}
           value={humidity}
+          unit={'%'}
         />
         <ForecastInfoItem
           label={'Ventos'}
           icon={'winds'}
           value={winds}
+          unit={'m/s'}
           aditionalInfo={windsDirection}
         />
         <ForecastInfoItem
           label={'Pressão ATM'}
           icon={'pressure'}
+          unit={'hpa'}
           value={pressure}
         />
       </InfoWrapper>
