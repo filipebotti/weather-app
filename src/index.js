@@ -12,6 +12,7 @@ import WeatherPage from './pages/Weather'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
+import { connect } from 'react-redux'
 import reducers from './reducers'
 
 import createSagaMiddleware from 'redux-saga'
@@ -22,18 +23,28 @@ const sagaMiddleware = createSagaMiddleware()
 const store = createStore(reducers, applyMiddleware(sagaMiddleware))
 sagaMiddleware.run(rootSaga)
 
+
+const ThemedApp = connect(({ theme }) => ({ theme }))(({ theme }) => {
+  
+  return (
+    <ThemeProvider theme={Themes[theme.selectedTheme]}>
+      <SafeAreaView style={{flex: 0, backgroundColor: Themes[theme.selectedTheme].colors.primaryColor}}/>
+      <SafeAreaView style={{ flex: 1, backgroundColor: Themes[theme.selectedTheme].colors.backgroundColor}}>
+        <StatusBar barStyle="light-content" />
+        {/* <StoryBook/> */}
+        <WeatherPage/>
+      </SafeAreaView>
+    </ThemeProvider>
+  )
+})
+
+
+
 export default () => {
   return (
     <>
       <Provider store={store}>
-        <ThemeProvider theme={Themes.light}>
-          <SafeAreaView style={{flex: 0, backgroundColor: Themes.light.colors.primaryColor}}/>
-          <SafeAreaView style={{ flex: 1, backgroundColor: Themes.light.colors.backgroundColor}}>
-            <StatusBar barStyle="light-content" />
-            {/* <StoryBook/> */}
-            <WeatherPage/>
-          </SafeAreaView>
-        </ThemeProvider>
+        <ThemedApp/>
       </Provider>
     </>
   );

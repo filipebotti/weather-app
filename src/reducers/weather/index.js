@@ -10,13 +10,13 @@ const INITIAL_STATE = {
   sunset: '23:59',
   winds: 0,
   windsDirection: 'N',
-  city: ''
+  city: '',
+  weatherIcon: '01d'
 }
 
 const weatherReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case Types.REQUEST_WEATHER_SUCCESS:
-      console.log(action)
       return { ...state, ...action.data}
     default: 
       return state

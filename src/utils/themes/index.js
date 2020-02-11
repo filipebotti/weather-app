@@ -1,5 +1,7 @@
-import light from './light'
+import day from './day'
+import night from './night'
 
 export default {
-  light
+  day,
+  night
 }

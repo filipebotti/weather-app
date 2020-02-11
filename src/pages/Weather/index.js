@@ -13,7 +13,7 @@ const WeatherWrapper = styled.View`
   flex: 1
   backgroundColor: ${props => props.theme.colors.primaryColor}  
   alignItems: center
-  paddingTop: 15
+  paddingTop: 25
   paddingBottom: 95.5
   justifyContent: space-between
 `
@@ -40,15 +40,18 @@ const WeatherPage = (props) => {
     max,
     sunrise,
     sunset,
+    city,
+    weatherIcon,
     onPressRefresh
   } = props
 
   return (
     <Wrapper>
       <WeatherWrapper>
-        <CityText>Fortaleza, CE</CityText>
+        <CityText>{city}</CityText>
         <ForecastCard
           temp={temp}
+          weatherIcon={weatherIcon}
         />
       </WeatherWrapper>
       <ForecastInfo
@@ -63,7 +66,9 @@ const WeatherPage = (props) => {
         sunrise={sunrise}
         sunset={sunset}
       />
-      <RefreshButton/>
+      <RefreshButton
+        onPress={onPressRefresh}
+      />
     </Wrapper>
   )
 }

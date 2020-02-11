@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { withKnobs, text, select, object, number } from '@storybook/addon-knobs'
-import light from '../../../utils/themes/light'
+import light from '../../../utils/themes/day'
 import ShadowText from './index'
 
 const stories = storiesOf("Shadow Text", module)

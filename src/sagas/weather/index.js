@@ -7,7 +7,7 @@ import moment from '../../utils/moment'
 
 function* requestWeather({ payload }) {
   try {
-    const { main, wind, sys, name, timezone } = yield call(getWeather, payload)
+    const { main, wind, sys, name, timezone, weather } = yield call(getWeather, payload)
     const data = {
       temp: main.temp.toLocaleString('pt-BR'),
       min: main.temp_min.toLocaleString('pt-BR'),
@@ -18,8 +18,10 @@ function* requestWeather({ payload }) {
       sunset: moment.unix(sys.sunset).utcOffset(timezone / 60).format('HH:mm'),
       winds: wind.speed.toLocaleString('pt-BR'),
       windsDirection: windDegreeToDirection(wind.deg),
-      city: name
+      city: name,
+      weatherIcon: weather[0].icon
     }
+    
     yield put({ type: Types.REQUEST_WEATHER_SUCCESS, data })
   } catch(e) {
     console.log(e)
