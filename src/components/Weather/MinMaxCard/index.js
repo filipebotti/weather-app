@@ -10,7 +10,8 @@ const Content = styled(ShadowView)`
   borderRadius: 18
   paddingVertical: 16
   position: absolute
-  top: -50
+  top: -40
+  backgroundColor: ${props => props.theme.colors.backgroundColor}
 `
 
 const TempWrapper = styled.View`

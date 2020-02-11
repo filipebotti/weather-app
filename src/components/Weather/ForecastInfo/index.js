@@ -12,7 +12,7 @@ const Wrapper = styled.View`
   width: ${width}
   height: 310
   alignItems: center
-  backgroundColor: white
+  backgroundColor: ${props => props.theme.colors.backgroundColor}
   paddingTop: 84
   paddingHorizontal: 38
 `
