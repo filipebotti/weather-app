@@ -17,9 +17,7 @@ const StorybookUIRoot = getStorybookUI({ port: 7007, host: 'localhost', asyncSto
 export default () => {
   return (
     <View style={{flex: 1}}>
-      <SafeAreaView style={{flex: 1}}>
-        <StorybookUIRoot/>
-      </SafeAreaView>
+      <StorybookUIRoot/>      
     </View>
   )
 };

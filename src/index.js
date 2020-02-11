@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   StatusBar,
+  SafeAreaView
 } from 'react-native';
 
 import Themes from './utils/themes'
@@ -11,8 +12,11 @@ export default () => {
   return (
     <>
       <ThemeProvider theme={Themes.light}>
-        <StatusBar barStyle="dark-content" />
-        <StoryBook/>
+        <SafeAreaView style={{flex: 0, backgroundColor: Themes.light.colors.primaryColor}}/>
+        <SafeAreaView style={{ flex: 1, backgroundColor: Themes.light.colors.backgroundColor}}>
+          <StatusBar barStyle="dark-content" />
+          <StoryBook/>
+        </SafeAreaView>
       </ThemeProvider>
     </>
   );
