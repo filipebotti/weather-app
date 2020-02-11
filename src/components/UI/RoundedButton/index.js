@@ -13,12 +13,12 @@ const Wrapper = styled(ShadowView)`
   justifyContent: center
 `
 const RefreshIcon = styled(Refresh).attrs(props => ({
-  fill: props.theme.colors.secondaryColor
+  fill: props.theme.colors.primaryColor
 }))``
 
 export default ({ onPress, ...props }) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} {...props}>
       <Wrapper>
         <RefreshIcon width={25} height={25}/>
       </Wrapper>
