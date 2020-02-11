@@ -9,6 +9,8 @@ const Content = styled(ShadowView)`
   flexDirection: row
   borderRadius: 18
   paddingVertical: 16
+  position: absolute
+  top: -50
 `
 
 const TempWrapper = styled.View`
