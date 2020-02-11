@@ -14,7 +14,7 @@ export default () => {
       <ThemeProvider theme={Themes.light}>
         <SafeAreaView style={{flex: 0, backgroundColor: Themes.light.colors.primaryColor}}/>
         <SafeAreaView style={{ flex: 1, backgroundColor: Themes.light.colors.backgroundColor}}>
-          <StatusBar barStyle="dark-content" />
+          <StatusBar barStyle="light-content" />
           <StoryBook/>
         </SafeAreaView>
       </ThemeProvider>
