@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import Marker from './Marker'
 
 import { Dimensions } from 'react-native'
@@ -37,7 +37,7 @@ const NightMarker = styled(Marker)`
   zIndex: 200
 `
 
-export default ({ sunset, sunrise }) => {
+export default withTheme(({ sunset, sunrise, theme }) => {
   return (
     <Wrapper>
       <DayBar/>
@@ -45,11 +45,14 @@ export default ({ sunset, sunrise }) => {
       <DayMarker 
         time={sunrise}
         icon={'sun'}
+        iconColor={theme.colors.primaryColor}
+        iconStrokeColor={theme.colors.primaryColor}
       />
       <NightMarker 
         time={sunset}
         icon={'moon'}
+        iconColor={theme.colors.secondaryColor}
       />
     </Wrapper>
   )
-}
+})

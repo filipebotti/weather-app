@@ -28,12 +28,12 @@ const TimeText = styled(Text)`
   lineHeight: 18
 `
 
-export default ({time, icon, ...props}) => {
+export default ({time, icon, iconColor, iconStrokeColor, ...props}) => {
   return (
     <Marker {...props}>    
       <ContentWrapper>
         <TimeText>{time}</TimeText>
-        <ForecastIcon name={icon} color={'black'}/>
+        <ForecastIcon name={icon} color={iconColor} stroke={iconStrokeColor}/>
       </ContentWrapper>
     </Marker>
   )

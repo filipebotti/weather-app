@@ -13,7 +13,8 @@ export default ({ name, ...props }) => {
   const Icon = styled(selectedIcon.svg).attrs(props => ({
     fill: props.color || 'black',
     width: props.width || selectedIcon.width,
-    height: props.height || selectedIcon.height
+    height: props.height || selectedIcon.height,
+    stroke: props.stroke || null
   }))``
 
   return <Icon {...props} />
