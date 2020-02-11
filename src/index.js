@@ -11,10 +11,16 @@ import StoryBook from '../storybook'
 import WeatherPage from './pages/Weather'
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import reducers from './reducers'
 
-const store = createStore(reducers)
+import createSagaMiddleware from 'redux-saga'
+import rootSaga from './sagas'
+
+const sagaMiddleware = createSagaMiddleware()
+
+const store = createStore(reducers, applyMiddleware(sagaMiddleware))
+sagaMiddleware.run(rootSaga)
 
 export default () => {
   return (
