@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Text } from '../../components/UI'
-import { ForecastCard, ForecastInfo } from '../../components/Weather'
+import { ForecastCard, ForecastInfo, DayNightInfo } from '../../components/Weather'
 
 const Wrapper = styled.View`
   flex: 1
@@ -30,7 +30,9 @@ const WeatherPage = (props) => {
     windsDirection,
     humidity,
     min,
-    max
+    max,
+    sunrise,
+    sunset
   } = props
 
   return (
@@ -48,6 +50,10 @@ const WeatherPage = (props) => {
         humidity={humidity}
         min={min}
         max={max}      
+      />
+      <DayNightInfo
+        sunrise={sunrise}
+        sunset={sunset}
       />
     </Wrapper>
   )

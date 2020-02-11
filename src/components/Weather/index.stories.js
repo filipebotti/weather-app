@@ -16,6 +16,8 @@ stories.add('Page', () => {
   const humidity = number('humidity', 87)
   const min = text('Min', '23°')
   const max = text('Max', '31°')
+  const sunrise = text('Sunrise', '5:15')
+  const sunset = text('Sunset', '17:42')
 
   return (
     <WeatherPage
@@ -25,7 +27,9 @@ stories.add('Page', () => {
       windsDirection={windsDirection}
       humidity={humidity}
       min={min}
-      max={max}    
+      max={max}
+      sunset={sunset}
+      sunrise={sunrise}  
     />
   )
 })
