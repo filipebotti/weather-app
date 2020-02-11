@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Text } from '../../components/UI'
+import { Text, RoundedButton } from '../../components/UI'
 import { ForecastCard, ForecastInfo, DayNightInfo } from '../../components/Weather'
+
+import withLogic from './withLogic'
 
 const Wrapper = styled.View`
   flex: 1
@@ -21,6 +23,11 @@ const CityText = styled(Text)`
   lineHeight: 24
 `
 
+const RefreshButton = styled(RoundedButton)`
+  position: absolute
+  right: 20
+`
+
 const WeatherPage = (props) => {
 
   const {
@@ -32,7 +39,8 @@ const WeatherPage = (props) => {
     min,
     max,
     sunrise,
-    sunset
+    sunset,
+    onPressRefresh
   } = props
 
   return (
@@ -55,8 +63,10 @@ const WeatherPage = (props) => {
         sunrise={sunrise}
         sunset={sunset}
       />
+      <RefreshButton/>
     </Wrapper>
   )
 }
 
 export { WeatherPage } 
+export default withLogic(WeatherPage)
