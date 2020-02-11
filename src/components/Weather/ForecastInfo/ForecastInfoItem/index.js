@@ -20,8 +20,15 @@ const IconWrapper = styled(CenteredView)`
 const LabelWrapper = styled(CenteredView)`
   height: 53
 `
+const AditionalInfoText = styled(Text)`
+  marginTop: 10
+  fontSize: 10
+  lineHeight: 12
+  letterSpacing: 1.0
+  fontWeight: 500
+`
 
-export default withTheme(({ label, icon, value, theme }) => {
+export default withTheme(({ label, icon, value, theme, aditionalInfo }) => {
   return (
     <Wrapper>
       <IconWrapper>
@@ -45,6 +52,7 @@ export default withTheme(({ label, icon, value, theme }) => {
       >
         {value}
       </Text>
+      {aditionalInfo != '' && <AditionalInfoText>{aditionalInfo}</AditionalInfoText>}
     </Wrapper>
   )
 })

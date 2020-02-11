@@ -13,10 +13,12 @@ stories.add('ForecastInfoItem', () => {
   const icon = select('Icon', ['humidity','winds', 'pressure'], 'humidity')
   const label = text('Label', 'Umidade')
   const value = number('Value', 87)
+  const aditionalInfo = text('Aditional Info', '')
 
   return <ForecastInfoItem
             icon={icon}
             label={label}
             value={value}
+            aditionalInfo={aditionalInfo}
           />      
 })

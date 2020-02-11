@@ -40,6 +40,7 @@ export default ({ humidity, winds, windsDirection, pressure, min, max }) => {
           label={'Ventos'}
           icon={'winds'}
           value={winds}
+          aditionalInfo={windsDirection}
         />
         <ForecastInfoItem
           label={'Pressão ATM'}
